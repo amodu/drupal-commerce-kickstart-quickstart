@@ -60,7 +60,7 @@ Create an account at https://www.openshift.com
 
 Create a php-5.4 application with MySQL and Cron support.
 
-    rhc app create drupal php-5.4 mysql-5.5 cron --from-code=git://github.com/richardflint/drupal-commerce-kickstart-quickstart.git
+    rhc app create drupal php-5.4 mysql-5.5 cron --from-code=git://github.com/richardflint/drupal-commerce-kickstart-quickstart.git --timeout=3000
 
 That's it, you can now checkout your application at:
     http://drupal-$yournamespace.rhcloud.com
