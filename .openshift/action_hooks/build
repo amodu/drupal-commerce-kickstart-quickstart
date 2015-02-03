@@ -34,13 +34,13 @@ if [ ! -d "${OPENSHIFT_DATA_DIR}downloads/current" ]
 then
   mkdir -p ${OPENSHIFT_TMP_DIR}drupal
 
-  echo "Download and install the latest stable version of Drupal"
+  echo "Download and install the latest stable version of Drupal Commerce Kickstart"
   echo
 
   mkdir -p ${OPENSHIFT_DATA_DIR}downloads
-  if ! drush dl drupal --destination=${OPENSHIFT_DATA_DIR}downloads --yes
+  if ! drush dl commerce_kickstart --destination=${OPENSHIFT_DATA_DIR}downloads --yes
   then
-    echo "ERROR: Unable download and install Drupal."
+    echo "ERROR: Unable download and install Drupal Commerce Kickstart."
     exit 7
   fi
 

@@ -55,11 +55,11 @@ then
 
   pushd ${OPENSHIFT_REPO_DIR}php
   echo
-  echo "Creating a new Drupal site at ${DRUPAL_SITE_DIR}/default"
+  echo "Creating a new Drupal Commerce Kickstart site at ${DRUPAL_SITE_DIR}/default"
   echo
-  if ! drush site-install standard --site-name=${OPENSHIFT_APP_NAME} --account-pass=$admin_pwd --db-url=mysql://$OPENSHIFT_MYSQL_DB_USERNAME:$OPENSHIFT_MYSQL_DB_PASSWORD@$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/$OPENSHIFT_APP_NAME --yes
+  if ! drush site-install commerce_kickstart --site-name=${OPENSHIFT_APP_NAME} --account-pass=$admin_pwd --db-url=mysql://$OPENSHIFT_MYSQL_DB_USERNAME:$OPENSHIFT_MYSQL_DB_PASSWORD@$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/$OPENSHIFT_APP_NAME --yes
   then
-    echo "Unable to configure your Drupal installation"
+    echo "Unable to configure your Drupal Commerce Kickstart installation"
     echo
     exit 10
   fi
@@ -109,11 +109,11 @@ END
 
   popd
   echo
-  echo "Drupal is now configured"
+  echo "Drupal Commerce Kickstart is now configured"
   echo
 
   client_result ""
-  client_result "Drupal installed successfully."
+  client_result "Drupal Commerce Kickstart installed successfully."
   client_result ""
   client_result "      Drupal admin login: admin"
   client_result "   Drupal admin password: $admin_pwd"

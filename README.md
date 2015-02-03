@@ -1,4 +1,4 @@
-Drupal on OpenShift
+Drupal Commerce Kickstart on OpenShift
 ===================
 
 This Git repository helps you get up and running quickly w/ a Drupal
@@ -60,7 +60,7 @@ Create an account at https://www.openshift.com
 
 Create a php-5.3 application with MySQL and Cron support.
 
-    rhc app create drupal php-5.3 mysql-5.1 cron --from-code=git://github.com/openshift/drupal-quickstart.git
+    rhc app create drupal php-5.3 mysql-5.1 cron --from-code=git://github.com/richardflint/drupal-commerce-kickstart-quickstart.git
 
 That's it, you can now checkout your application at:
     http://drupal-$yournamespace.rhcloud.com
